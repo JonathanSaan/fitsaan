@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="flex fixed items-center bg-black px-5 lg:px-9 h-20 w-full top-0">
+    <header className="z-10 flex items-center bg-black px-5 lg:px-9 h-20">
       <Link href="/" className="text-red text-3xl uppercase">fitsaan</Link>
       
       <input type="search" placeholder="Search" className="hidden bg-black text-white outline-none caret-red placeholder-white border-b-2 border-gray focus:border-red ml-auto mr-7 pl-2 pb-1 max-sm:w-44 max-md:w-56 w-72" />

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, MouseEventHandler } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { FaGoogle, FaUser, FaLock, FaKey, FaEye, FaEyeSlash } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -14,6 +14,7 @@ type FormValues = {
   email: string
   password: string
   confirmPassword: string
+  terms: boolean
 }
 
 const SignUp = () => {
@@ -25,7 +26,7 @@ const SignUp = () => {
   
   const isPasswordMatching = (value: string) => value === watch("password");
   
-  const togglePasswordVisibility = (type: string) => {
+  const togglePasswordVisibility = (type: string | MouseEventHandler<HTMLButtonElement>) => {
     if(type === "password") {
       return setShowPassword(!showPassword);
     }
@@ -61,7 +62,7 @@ const SignUp = () => {
             <FaKey color="#da272c" size={20} className="absolute flex items-center mt-1 ml-2 pointer-events-none" />
             <input type={showConfirmPassword ? "text" : "password"} placeholder="Confirm password" className="bg-black outline-none caret-red placeholder-white border-b-2 focus:border-red border-gray pl-12 pr-16 pb-2 h-11 sm:w-[28rem]" {...register("confirmPassword", {required: true, minLength: 8, validate: isPasswordMatching})} />
             
-            <button type="button" onClick={togglePasswordVisibility} className="absolute flex items-center mt-[-2.3rem] mr-5 right-0">
+            <button type="button" onClick={() => togglePasswordVisibility("confirmPassword")} className="absolute flex items-center mt-[-2.3rem] mr-5 right-0">
               {showConfirmPassword ? <FaEyeSlash color="#da272c" size={20} /> : <FaEye color="#da272c" size={20} />}
             </button>
           </span>

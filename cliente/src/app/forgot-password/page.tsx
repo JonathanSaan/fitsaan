@@ -23,7 +23,7 @@ const SignIn = () => {
           <span className="relative mt-1">
             <MdEmail color="red" size={20} className="absolute flex items-center mt-1 ml-2 pointer-events-none" />
             <input type="text" placeholder="Email" className="bg-black outline-none caret-red placeholder-white border-b-2 focus:border-red border-gray pl-12 pb-2 h-11 sm:w-[28rem]" {...register("email", {required: true, pattern: /^\S+@\S+$/i})} />
-          </span>y
+          </span>
           
           <button className={`uppercase ${isValid ? "bg-red hover:bg-red/85" : "border-2 border-gray cursor-not-allowed"} mt-8 h-12 sm:w-[28rem] rounded`} disabled={!isValid}>continue</button>
         </form>

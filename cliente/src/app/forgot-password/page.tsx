@@ -25,7 +25,7 @@ const SignIn = () => {
             <input type="text" placeholder="Email" className="bg-black outline-none caret-red placeholder-white border-b-2 focus:border-red border-gray pl-12 pb-2 h-11 sm:w-[28rem]" {...register("email", {required: true, pattern: /^\S+@\S+$/i})} />
           </span>
           
-          <button className={`uppercase ${isValid ? "bg-red hover:bg-red/85" : "border-2 border-gray cursor-not-allowed"} mt-8 h-12 sm:w-[28rem] rounded`} disabled={!isValid}>continue</button>
+          <button className={`uppercase ${isValid ? "bg-red hover:bg-red-600 active:bg-red-700" : "border-2 border-gray cursor-not-allowed"} mt-8 h-12 sm:w-[28rem] rounded`} disabled={!isValid}>continue</button>
         </form>
         <span><Link href="/sign-in" className="ml-1 pb-1 px-1 hover:border-b-2 hover:border-red text-red">Return to Sign in</Link></span>
       </div>

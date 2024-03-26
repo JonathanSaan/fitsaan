@@ -49,7 +49,7 @@ const SignIn = () => {
             <Link href="/forgot-password" className="text-red pb-1 px-1 hover:border-b-2 hover:border-red">Forgot password?</Link>
           </span>
           
-          <button className={`uppercase ${isValid ? "bg-red hover:bg-red/85" : "border-2 border-gray cursor-not-allowed"} h-12 sm:w-[28rem] rounded`} disabled={!isValid}>sign in</button>
+          <button className={`uppercase ${isValid ? "bg-red hover:bg-red-600 active:bg-red-700" : "border-2 border-gray cursor-not-allowed"} h-12 sm:w-[28rem] rounded`} disabled={!isValid}>sign in</button>
           <button className="flex justify-center items-center mt-6 mx-auto border-2 border-gray hover:bg-gray/10 px-5 h-12 w-full rounded"><FaGoogle size={18} className="mr-2"/> Sign in with Google</button>
         </form>
         <span>Don't have an account? <Link href="/sign-up" className="ml-1 pb-1 px-1 hover:border-b-2 hover:border-red text-red">Sign up</Link></span>

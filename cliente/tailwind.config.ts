@@ -11,7 +11,11 @@ const config: Config = {
       "white": "#fffffc",
       "black": "#0d0b0d",
       "gray": "#717070",
-      "red": "#da272c",
+      "red": {
+        DEFAULT: "#da272c",
+        600: "#b71e22",
+        700: "#981c1f",
+      },
     },
   },
   plugins: [],

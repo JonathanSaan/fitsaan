@@ -10,9 +10,8 @@ const Home = () => {
       <Header />
       <main className="flex flex-col min-h-screen bg-black">
         <div className="relative">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black"></div>
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black"></div>
-          <section className="absolute max-md:top-1/2 max-md:left-1/2 max-md:transform max-md:-translate-x-1/2 max-md:-translate-y-1/2 text-center text-white md:mt-[11vw] md:ml-[3vw] max-sm:w-full md:min-w-[53rem] xl:min-w-[73rem] sm:w-[90vw] md:w-[58vw] xl:w-[50rem]">
+          <div className="absolute z-30 bottom-0 left-0 h-[40%] w-full bg-gradient-to-t from-black"></div>
+          <section className="absolute z-10 max-md:top-1/2 max-md:left-1/2 max-md:transform max-md:-translate-x-1/2 max-md:-translate-y-1/2 text-center text-white md:mt-[14vw] md:ml-[8vw] max-sm:w-full md:min-w-[53rem] xl:min-w-[73rem] sm:w-[90vw] md:w-[58vw] xl:w-[50rem]">
             <h1 className="font-semibold max-sm:text-2xl max-md:text-4xl max-xl:text-5xl text-7xl">
               Your Fitness and Wellness Community
             </h1>
@@ -24,7 +23,7 @@ const Home = () => {
             </p>
             <Link
               href="/sign-up"
-              className="bg-red hover:bg-red/85 py-4 px-8 uppercase rounded-xl"
+              className="bg-red hover:bg-red-600 active:bg-red-700 py-4 px-8 uppercase rounded-xl"
             >
               Join Now!
             </Link>
@@ -34,14 +33,14 @@ const Home = () => {
             alt="a man exercising dumbbell"
             placeholder="blur"
             priority
-            className="max-md:hidden object-cover w-screen pointer-events-none"
+            className="max-md:hidden object-cover w-screen pointer-events-none brightness-50"
           />
           <Image
             src={bannerMobile}
             alt="a man exercising dumbbell"
             placeholder="blur"
             priority
-            className="md:hidden object-cover h-[100vw] w-screen pointer-events-none"
+            className="md:hidden object-cover h-[100vw] w-screen pointer-events-none brightness-50"
           />
         </div>
 
